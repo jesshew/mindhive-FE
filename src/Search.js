@@ -42,7 +42,7 @@ const Search = () => {
       const response = await axios.post(`${API_BASE_URL}${ENDPOINTS.SEARCH}`, { query: searchQuery });
       if (response.data.response.includes("I don't know.")) {
         setSearchResponse(getRandomResponse(funResponses));
-      } else if (/(count|number|list)/i.test(response.data.response))  {
+      } else if (/(count|number)/i.test(response.data.response))  {
         setSearchResponse(getRandomResponse(mathResponses));
       }
       else {
