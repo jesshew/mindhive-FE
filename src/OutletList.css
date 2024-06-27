@@ -1,0 +1,101 @@
+/* OutletList.css */
+
+.outlet-list {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.outlet-item {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.outlet-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.outlet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.outlet-icon {
+  margin-right: 8px;
+  color: #009C3B; 
+}
+
+.outlet-item:hover .outlet-icon {
+  color: #F2b700; /* Subway yellow */
+}
+
+.outlet-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.outlet-address {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.outlet-hours {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.outlet-hours span {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.outlet-hours ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.outlet-hours ul li {
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.outlet-hours ul li:before {
+  content: '•';
+  position: absolute;
+  color: #009C3B; 
+  left: 0;
+}
+
+.outlet-item:hover .outlet-hours ul li:before {
+  color: #F2b700; /* Subway yellow */
+}
+
+.waze-link {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.waze-link:hover {
+  text-decoration: underline;
+  color:  #F2b700;; /* Slightly darker green on hover */
+}
+
+.waze-link .outlet-icon {
+  margin-right: 5px;
+  color: #4CAF50; /* Make the icon green too */
+}
