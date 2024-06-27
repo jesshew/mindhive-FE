@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
-import { API_BASE_URL, ENDPOINTS } from './constants';
+import { API_BASE_URL, ENDPOINTS } from '../constants';
 
 const funResponses = [
   "Sorry, I don't know the answer to this question. Could you rephrase it another way?",

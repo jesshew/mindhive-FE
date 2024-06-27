@@ -1,8 +1,7 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Map from './Map';
-import Search from './Search';
+import MapAndOutletPanel from './MainPage/MapAndOutletPanel';
+import Search from './MainPage/Search';
 import { API_BASE_URL, ENDPOINTS } from './constants';
 
 
@@ -31,7 +30,7 @@ const App = () => {
       
       <Search />
   
-      <Map outlets={outlets} />
+      <MapAndOutletPanel outlets={outlets} />
       {/* {console.log(outlets)} */}
     </div>
   );

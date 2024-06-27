@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, FeatureGroup } from "react-leaflet";
 import { Button } from 'react-bootstrap';
 import L from "leaflet";
-import './App.css'
+import '../App.css'
 
 import "leaflet/dist/leaflet.css";
-import OutletMap from "./OutletMap";
-import OutletList from "./OutletList";
+import PinWithRadius from "../Map/PinWithRadius";
+import OutletList from "../Outlet/OutletList";
 
-const Map = ({ outlets }) => {
+const MapAndOutletPanel = ({ outlets }) => {
   const [hoveredOutletId, setHoveredOutletId] = useState(null);
   const [showIntersections, setShowIntersections] = useState(false);
   const [intersectingOutlets, setIntersectingOutlets] = useState(new Set());
@@ -65,7 +65,7 @@ const Map = ({ outlets }) => {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <FeatureGroup ref={groupRef}>
             {outlets.map((outlet) => (
-              <OutletMap
+              <PinWithRadius
                 key={outlet.id}
                 outlet={outlet}
                 intersectingOutlets={intersectingOutlets}
@@ -102,4 +102,4 @@ const Map = ({ outlets }) => {
   );
 };
 
-export default Map;
+export default MapAndOutletPanel;

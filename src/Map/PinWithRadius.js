@@ -1,9 +1,9 @@
 import React from 'react';
 import { Circle, Popup } from 'react-leaflet';
-import MapMarker from './MapMarker'; 
-import OutletInfo from './OutletInfo'; 
+import MapPin from './MapPin'; 
+import OutletInfo from '../Outlet/OutletInfo'; 
 
-const OutletMap = ({
+const PinWithRadius = ({
   outlet,
   intersectingOutlets,
   hoveredOutletId,
@@ -24,7 +24,7 @@ const OutletMap = ({
           weight: intersectingOutlets.has(outlet.id) ? 2 : 1,
         }}
       />
-      <MapMarker
+      <MapPin
         outlet={{ ...outlet }}
         isHovered={hoveredOutletId === outlet.id}
         onMouseOver={handleMarkerMouseOver}
@@ -33,9 +33,9 @@ const OutletMap = ({
         <Popup>
           <OutletInfo outlet={outlet} isPopup = {true} />
         </Popup>
-      </MapMarker>
+      </MapPin>
     </React.Fragment>
   );
 };
 
-export default OutletMap;
+export default PinWithRadius;
