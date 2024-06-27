@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { MapContainer, TileLayer, Popup, Circle, FeatureGroup } from "react-leaflet";
+import { MapContainer, TileLayer, FeatureGroup } from "react-leaflet";
 import { Button } from 'react-bootstrap';
 import L from "leaflet";
 import './App.css'
