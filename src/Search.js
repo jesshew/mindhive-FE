@@ -93,8 +93,11 @@ const Search = () => {
       </div>
 
       <div className="response-card">
-        <h5 className="response-title">Search Response:</h5>
+        <h5 className="rresponse-title">Search Response:</h5>
+        <p className="response-text">
         {loading ? 'Working on it...' : (searchResponse || error || 'No search results yet.')}
+        </p>
+
       </div>
     </>
   );
