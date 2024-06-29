@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Marker } from 'react-leaflet';
 import L from 'leaflet';
-import mapPinIcon from "../asset/mapPin.svg";
+import mapPinIcon from "../asset/mappin.svg";
 
 const MapPin = ({ outlet, isHovered, onMouseOver, onMouseOut, children }) => {
     const normalIcon = useMemo(() => L.icon({
