@@ -99,3 +99,15 @@
   margin-right: 5px;
   color: #4CAF50; /* Make the icon green too */
 }
+
+.empty-outlet-message {
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #666;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
